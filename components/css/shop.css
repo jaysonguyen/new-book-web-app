@@ -1,0 +1,249 @@
+:root {
+    --text-color: #979393;
+    --back-color: rgb(34, 48, 38);
+    --border-color: #ccc;
+    --primary-color: #00a96c;
+}
+
+.navigation {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.seperate {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+    height: 1px;
+    width: 70%;
+    background-color: #ccc;
+    box-shadow: 2px 2px 10px #ccc;
+}
+
+.search_filler {
+    width: 100%;
+    padding-bottom: 30px;
+    border: 1px solid #ccc;
+}
+
+.search_feed {
+    width: 100%;
+    height: 900px;
+}
+
+.search_box_container {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search_box_container .search_heading {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.search_box_container input {
+    border: none;
+    padding: 10px 5px;
+    outline: none;
+}
+
+/* POPULAR LIST */
+
+.search_filler_detail {
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.search_heading {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.popular_list{
+    list-style: none;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 30px;
+}
+
+.popular_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.popular_item input {
+    margin-right: 10px;
+}
+
+.popular_item input:ac {
+    background-color: #00a96c;
+}
+
+.popular_item label {
+    margin-right: auto;
+}
+
+.popular_typebook {
+    font-size: 17px; 
+}
+
+.popular_item h5 {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: var(--back-color);
+    opacity: 0.8;
+    margin-top: 3px;
+}
+
+.best_seller_item {
+    text-decoration: none;
+    display: block;
+}
+
+.best_seller_item:hover {
+    color: initial;
+    opacity: 0.9;
+}
+
+
+/* Price filter */
+
+.price_filler {
+    margin-top: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+
+.search_heading {
+    margin-bottom: 20px;
+}
+
+#range_price {
+    background-color: #00a96c;
+}
+
+#range_price {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.range_price {
+    margin-right: auto;
+}
+
+#range_price::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.rating_icon i {
+    color: #edab56;
+}
+
+.border_none {
+    border: none;
+}
+
+
+/* Feed */
+
+.recommendation_container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(229, 229, 229);
+}
+
+.rec_list {
+    list-style: none;
+    display: flex;
+    margin-left: 20px;
+}
+
+.rec_item {
+    margin-right: 30px;
+}
+
+.rec_item button {
+    border: none;
+    padding: 5px 15px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.rec_item button.active {
+    background-color: #00a96c;
+    color: #fff;
+}
+
+.price_item {
+    background-color: #fff;
+    padding: 2px 10px;
+}
+
+.price_item a {
+    margin-right: 80px;
+}
+
+.book_feed {
+    margin-top: 20px;
+}
+
+.col.col-lg-4 {
+    padding: 0;
+}
+
+/* PAGINATIOn */
+.pagiation {
+    position: relative;
+    left: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.slash_forward {
+    display: inline-block;
+    height: 40px;
+    width: 0.5px;
+    background-color: #000;
+    rotate: 30deg;
+    transform: translateY(9px);
+    margin-left: 7px;
+}
+
+.pagintaion_detail {
+    margin: 0 20px;
+}
+
+.pagintaion_detail sup {
+    font-size: 25px;
+    color: #00a96c;
+}
+
+.pagiation button {
+    border: none;
+    background-color: transparent;
+}
+
+.number_of_page {
+    font-size: 14px;
+}
