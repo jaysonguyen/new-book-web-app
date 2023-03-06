@@ -129,10 +129,12 @@ let deleteMeal = async () => {
   try {
     await deleteMonAn(2);
     await console.log(getMeal());
-  } catch (error) {
+  } catch (err) {
     console.log(err);
   }
 };
+
+//test push git hub lan cuoi cung trong dem 
 
 // getMeal();
 insertMonAn();
