@@ -33,6 +33,7 @@ const getUser = async () => {
         DT: resultSet.recordset,
       };
     } else {
+      //empty result
       return {
         EM: "Get data successful",
         EC: 0,
@@ -53,12 +54,31 @@ const insertMonAn = async () => {
   try {
     var poolConnection = await sql.connect(config);
     var resultSet = await poolConnection.query(
-      `Insert into Datmonannhanh (mamonan, tenmonan) values (23, 'Mon an moi')`
+      `Insert into Datmonannhanh (mamonan, tenmonan) values (24, 'Thit Lon')`
     );
     poolConnection.close();
-    // if(resultSet)
-    console.log(resultSet);
-  } catch (err) {}
+    if (resultSet) {
+      return {
+        EM: "Insert data successfull",
+        EC: 0,
+        DT: resultSet.recordset,
+      };
+    } else {
+      return {
+        EM: "Insert data successfull",
+        EC: 0,
+        DT: [],
+      };
+    }
+    // console.log(resultSet);
+  } catch (err) {
+    console.log(err);
+    return {
+      EM: "Error from services",
+      EC: 1,
+      DT: "",
+    };
+  }
 };
 
 // xoa mon an
@@ -85,7 +105,7 @@ const deleteMonAn = async (id) => {
       };
     }
   } catch (err) {
-    console.log(e);
+    console.log(err);
     return {
       EM: "Error from services",
       EC: 1,
@@ -114,5 +134,5 @@ let deleteMeal = async () => {
   }
 };
 
-getMeal();
+// getMeal();
 insertMonAn();
