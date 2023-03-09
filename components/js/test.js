@@ -113,6 +113,38 @@ const deleteMonAn = async (id) => {
     };
   }
 };
+const deleteDoUong = async (id) =>{
+  try{
+    let poolConnection = await sql.connect(config);
+    console.log("Reading row in the table doUong");
+    let resultSet = await poolConnection.query(
+      `Delete from doUong where MaDoUong = '${id}'`
+    );
+    poolConnection.close();
+    if(resultSet){
+      return{
+        EM:"Delete data successfull",
+        EC:0,
+        DT: [],
+      };
+    }
+    else{
+      return{
+        EM:"Delete data successfull",
+        EC:1,
+        DT: [],
+      };
+    }
+  }
+  catch(err){
+    console.log(err);
+    return {
+      EM: "Error from services",
+      EC: 1,
+      DT: "",
+    };
+  }
+}
 
 //controller
 
@@ -127,7 +159,7 @@ let getMeal = async () => {
 
 let deleteMeal = async () => {
   try {
-    await deleteMonAn(2);
+    await deleteDoUong(1);
     await console.log(getMeal());
   } catch (err) {
     console.log(err);
@@ -137,8 +169,8 @@ let deleteMeal = async () => {
 //test push git hub lan cuoi cung trong dem 
 
 // getMeal();
-insertMonAn();
-
+// insertMonAn();
+deleteMeal();
 //kjashdkashdkhaskjdhakshd Thao My da sua dong nay
 // Thanhf Nguyen sua lai Dong nay cua My
 console.log("hahahahahahah ");
